@@ -33,8 +33,9 @@ void loop() {
 
   Serial.print("brightness: ");
   Serial.println(brightnessRed);
-  Serial.print("brightnessBlue: ")
+  Serial.print("brightnessBlue: ");
   Serial.println(brightnessBlue);
+  delay(100);
 
 }
 
