@@ -21,22 +21,20 @@ void loop() {
   if(brightness = 255){
     brightness -= 5;
   }
-  if(brightness >= 240 || brightness <= 0)
+  if(brightnessRed >= 240 || brightnessRed <= 0)
   {
-    fadeAmount = fadeAmount * -1;
+    fadeAmount = -fadeAmount;
 
+    if(brightnessBlue >= 240 || brightnessBlue <= 0)
+    {
+      fadeAmount2 = -fadeAmount2;
+    }
   }
-  /*if(brightness <= 0)
-  {
-    fadeAmount = fadeAmount * -1;
-  }*/
+
   Serial.print("brightness: ");
-  Serial.println(brightness);
-/*if
-  or(int i = 255; i >= 0; i--)
-  {
-    analogWrite(led, i);
-    delay(5);
-  }*/
+  Serial.println(brightnessRed);
+  Serial.print("brightnessBlue: ")
+  Serial.println(brightnessBlue);
+
 }
 
